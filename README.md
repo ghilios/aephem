@@ -1,3 +1,3 @@
 For documentation, please visit:
 
-http://adh-sj.info/software/healmask/about.php
+http://aephem.adh-sj.info
