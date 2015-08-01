@@ -3,17 +3,15 @@ bindings. It is compatible with JPL ephemerides. It has routines for the
 standard astrometric reductions, conversions between different time standards
 and transformations between coordinate systems.
 
-This release is labelled "Canopus".
-
 AEPHEM is based on aa by Stephen Moshier (http://www.moshier.net) and has
 adapted routines from ephcom (http://ephemeris.com).
 
 The library is fully documented using doxygen.  Documentation is available
-online at http://aephem.sourceforge.net/; alternatively, you can make a local
+online at http://aephem.adh-sj.info; alternatively, you can make a local
 copy by running doxygen on doc/aephem.dox (you might want to change the
 OUTPUT_DIRECTORY).
 
 AEPHEM is distributed under the GNU General Public License, which is included in
 this package in the file COPYING.
 
-Copyright Adam Hincks, 2013.
+Copyright Adam Hincks, 2015.
