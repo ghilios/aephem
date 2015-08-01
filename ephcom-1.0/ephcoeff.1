@@ -1,0 +1,55 @@
+.TH ephcoeff "1" "May 2004" "ephcoeff (ephemeris) 1.0" ephemeris.com
+.SH NAME
+ephcoeff \- print ephemeris coefficients for a Julian Day to stdout
+.SH SYNOPSIS
+.B ephcoeff
+\fIbinary-ephemeris-file\fR \fIJD\fR
+.br
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Prints a parsed output of a data block from a JPL binary ephemeris file
+that covers the desired Julian Day.  Output is printed to stdout.
+.TP
+\fIbinary-ephemeris-file\fR
+the binary ephemeris file.
+.TP
+\fIJD\fR
+the Julian Day (a double precision value) for which to print coefficients.
+.PP
+.B ephcoeff
+takes a Julian Day from the command line and determines which block spans
+that date in the binary ephemeris file.  If the date is out of range of
+the ephemeris, an error message is printed.  If not,
+.B ephcoeff
+will print a parsed output of all data in a data block, starting with the
+first and last Julian Day covered by the block, and proceeding with
+the data for each body.  For each body, data is broken down by subinterval.
+For each subinterval, data is broken down by coordinate.  For each
+coordinate, data is broken down by Chebyshev coefficient.
+.PP
+The output is printed to stdout, and it is verbose (a little over one
+line per coefficient, which is over 1,000 lines for DE405).
+.SH AUTHOR
+Written by Paul Hardy, ephemeris.com.
+.SH "REPORTING BUGS"
+Report bugs to <bugs@ephemeris.com>.
+.SH COPYRIGHT
+Copyright \(co 1994-2004 Paul Hardy
+.PP
+This is free software; you can redistribute it and/or modify it
+under the terms of version 2.1 of the GNU Lesser General Public
+License as published by the Free Software Foundation.
+.PP
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+.PP
+You should have received a copy of the GNU Lesser General Public
+License along with this package; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+or see http://www.gnu.org/copyleft/lesser.html on the web.
+.SH "SEE ALSO"
+eph2eph(1), eph2asc(1), asc2eph(1), testeph(1), headcmp(1), ephcmp(1),
+vtransit(1)

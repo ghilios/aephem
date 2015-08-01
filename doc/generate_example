@@ -1,0 +1,34 @@
+#!/bin/bash
+
+file=("../demo/quick_example.c    example_quick    Quick_Example" \
+      "../demo/position_table.c   example_position Table_of_Positions" \
+      "../demo/compare_horizons.c example_compare  Compare_to_HORIZONS" \
+      "../demo/solid_angle.c      example_solid    Solid_Angles")
+
+for ((i = 0; i < ${#file[@]}; i++)); do
+  path=`echo ${file[$i]} | awk '{printf("%s\n", $1);}'`
+  name=`echo ${file[$i]} | awk '{printf("%s\n", $2);}'`
+  title=`echo ${file[$i]} | awk '{printf("%s\n", $3);}'`
+  dox="${name}.dox"
+  
+  echo "//! \page ${name} ${title//_/ }" > $dox
+  echo "//!" >> $dox
+  echo "//! \\code" >> $dox
+  wait=0
+  cat $path | while IFS='' read l; do
+    if [ "${l:0:5}" = "//===" ] ; then
+      if [ $wait = 1 ]; then
+        wait=0
+        continue
+      else
+        wait=1
+        continue
+      fi
+    fi
+    if [ $wait = 1 ] ; then
+      continue
+    fi
+    echo "//! ${l//\\/\\\\}" >> $dox
+  done
+  echo "//! \\endcode" >> $dox
+done

@@ -1,0 +1,141 @@
+*******************************************************************************
+Ephemeris / WWW_USER Wed Feb  1 17:20:56 2012 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Mercury (199)                   {source: DE405}
+Center body name: Earth (399)                     {source: DE405}
+Center-site name: (user defined site below)
+*******************************************************************************
+Start time      : A.D. 2012-Feb-01 12:35:00.0000 UT      
+Stop  time      : A.D. 2012-Feb-29 12:35:00.0000 UT      
+Step-size       : 1000 minutes
+*******************************************************************************
+Target pole/equ : IAU_MERCURY                     {East-longitude -}
+Target radii    : 2439.7 x 2439.7 x 2439.7 km     {Equator, meridian, pole}    
+Center geodetic : 280.616670,43.6520478,0.0909277 {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 280.616670,4622.31743,4380.2594 {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : High-precision EOP model        {East-longitude +}
+Center radii    : 6378.1 x 6378.1 x 6356.8 km     {Equator, meridian, pole}    
+Target primary  : Sun                             {source: DE405+DE406}
+Interfering body: MOON (Req= 1737.400) km         {source: DE405}
+Deflecting body : Sun, EARTH                      {source: DE405}
+Deflecting GMs  : 1.3271E+11, 3.9860E+05 km^3/s^2                              
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : JD  
+EOP file        : eop.120201.p120424                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2012-FEB-01. PREDICTS-> 2012-APR-23
+Units conversion: 1 AU= 149597870.691 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar Elongation (  0.0,180.0=NO )                           
+*******************************************************************************
+Date_________JDUT     R.A.__(a-apparent)__DEC Azi_(a-appr)_Elev Ob-lon Ob-lat
+*****************************************************************************
+$$SOE
+2455959.024305556 *   20 43 32.00 -20 15 42.3 117.9057  -0.6391 307.39  -4.88
+2455959.718750000  m  20 48 21.93 -19 57 59.1 357.8819 -66.3022 310.48  -4.89
+2455960.413194444 *m  20 53 12.07 -19 39 37.3 241.2493   0.9573 313.56  -4.90
+2455961.107638889 *   20 58 03.11 -19 20 31.0 138.9323  16.2041 316.63  -4.91
+2455961.802083333  m  21 02 53.65 -19 00 39.0  51.8495 -56.2589 319.70  -4.92
+2455962.496527778 Am  21 07 43.91 -18 40 07.9 260.8172 -17.7212 322.76  -4.93
+2455963.190972222 *   21 12 35.07 -18 18 54.3 165.5831  26.8010 325.82  -4.94
+2455963.885416667  m  21 17 26.02 -17 56 54.2  79.5839 -36.7469 328.87  -4.95
+2455964.579861111  m  21 22 16.27 -17 34 13.8 281.8388 -37.4490 331.91  -4.97
+2455965.274305556 *   21 27 07.22 -17 10 52.8 196.0819  27.6562 334.95  -4.98
+2455965.968750000 Am  21 31 58.28 -16 46 45.8  98.5857 -15.5117 337.98  -4.99
+2455966.663194444  m  21 36 48.39 -16 21 57.2 312.7026 -54.8410 341.01  -5.01
+2455967.357638889 *   21 41 38.79 -15 56 29.7 224.0492  18.4639 344.03  -5.02
+2455968.052083333 *m  21 46 29.56 -15 30 17.9 116.9092   4.8984 347.04  -5.04
+2455968.746527778  m  21 51 19.29 -15 03 23.8   4.5411 -61.3399 350.06  -5.05
+2455969.440972222 *   21 56 08.75 -14 35 52.1 246.9114   2.6085 353.06  -5.07
+2455970.135416667 *   22 00 58.67 -14 07 38.9 138.9780  22.2354 356.06  -5.09
+2455970.829861111  m  22 05 47.60 -13 38 43.9  50.6858 -50.1296 359.05  -5.11
+2455971.524305556     22 10 35.63 -13 09 12.6 267.2566 -16.3512   2.04  -5.13
+2455972.218750000 *   22 15 23.94 -12 39 03.6 167.9551  32.9104   5.03  -5.15
+2455972.913194444  m  22 20 11.36 -12 08 14.9  76.9850 -30.5267   8.01  -5.17
+2455973.607638889     22 24 57.24 -11 36 51.9 289.8690 -35.5552  10.99  -5.20
+2455974.302083333 *   22 29 42.90 -11 04 55.8 201.3107  32.8277  13.97  -5.22
+2455974.996527778 Cm  22 34 27.70 -10 32 24.2  96.0596  -8.9572  16.94  -5.25
+2455975.690972222     22 39 10.35 -09 59 21.6 322.6215 -50.9254  19.91  -5.28
+2455976.385416667 *   22 43 51.93 -09 25 51.6 230.7519  22.1410  22.89  -5.31
+2455977.079861111 *m  22 48 32.47 -08 51 52.7 114.9301  12.0544  25.86  -5.34
+2455977.774305556     22 53 10.27 -08 17 28.2   9.6759 -54.2914  28.84  -5.38
+2455978.468750000 C   22 57 45.85 -07 42 43.5 254.1782   5.1758  31.82  -5.41
+2455979.163194444 *m  23 02 19.84 -07 07 39.1 138.5986  30.0527  34.81  -5.45
+2455979.857638889     23 06 50.47 -06 32 17.6  49.1766 -42.2411  37.80  -5.50
+2455980.552083333     23 11 17.45 -05 56 45.3 275.3224 -14.1436  40.80  -5.54
+2455981.246527778 *m  23 15 41.83 -05 21 05.1 171.4314  40.6438  43.82  -5.59
+2455981.940972222 A   23 20 02.10 -04 45 19.6  74.1989 -22.5617  46.84  -5.64
+2455982.635416667     23 24 17.10 -04 09 35.7 299.4842 -32.6482  49.89  -5.69
+2455983.329861111 *m  23 28 27.93 -03 33 58.2 209.0785  38.6822  52.94  -5.75
+2455984.024305556 *   23 32 33.68 -02 58 31.1  93.5340  -0.6066  56.02  -5.81
+2455984.718750000     23 36 32.43 -02 23 20.9 333.3209 -45.6512  59.13  -5.87
+2455985.413194444 *m  23 40 24.96 -01 48 34.2 239.8801  25.4239  62.26  -5.94
+2455986.107638889 *   23 44 11.11 -01 14 16.3 113.5323  21.0554  65.42  -6.01
+2455986.802083333     23 47 48.53 -00 40 34.0  15.8162 -45.9325  68.61  -6.09
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Prior to 1962, times are UT1. Dates thereafter are UTC. Any 'b' symbol in
+the 1st-column denotes a B.C. date. First-column blank (" ") denotes an A.D.
+date. Calendar dates prior to 1582-Oct-15 are in the Julian calendar system.
+Later calendar dates are in the Gregorian system.
+
+  The uniform Coordinate Time scale is used internally. Conversion between
+CT and the selected non-uniform UT output scale has not been determined for
+UTC times after the next July or January 1st.  The last known leap-second
+is used over any future interval.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+SOLAR PRESENCE (OBSERVING SITE)
+  Time tag is followed by a blank, then a solar-presence symbol:
+
+        '*'  Daylight (refracted solar upper-limb on or above apparent horizon)
+        'C'  Civil twilight/dawn
+        'N'  Nautical twilight/dawn
+        'A'  Astronomical twilight/dawn
+        ' '  Night OR geocentric ephemeris
+
+LUNAR PRESENCE (OBSERVING SITE)
+  The solar-presence symbol is immediately followed by a lunar-presence symbol:
+
+        'm'  Refracted upper-limb of Moon on or above apparent horizon
+        ' '  Refracted upper-limb of Moon below apparent horizon OR geocentric
+             ephemeris
+ 
+ R.A._(a-apparent)__DEC. =
+   Airless apparent right ascension and declination of the target center with
+respect to the Earth true-equator and the meridian containing the Earth true
+equinox of date.  Corrected for light-time, gravitational deflection of light,
+stellar aberration, precession & nutation.
+   Units: HMS (HH MM SS.ff) and DMS (DD MM SS.f)
+ 
+ Azi_(a-appr)_Elev =
+   Airless apparent azimuth and elevation of target center. Corrected for
+light-time, the gravitational deflection of light, stellar aberration,
+precession and nutation. Azimuth measured North(0) -> East(90) -> South(180) ->
+West(270) -> North (360). Elevation is with respect to plane perpendicular
+to local zenith direction.  TOPOCENTRIC ONLY. Units: DEGREES
+ 
+ Ob-lon Ob-lat =
+   Apparent planetographic ("geodetic") longitude and latitude (IAU2006 model)
+of the center of the target disk seen by the OBSERVER at print-time. Light
+travel-time from target to observer is taken into account. Latitude is the
+angle between the equatorial plane and the line perpendicular to the reference
+ellipsoid of the body (e.g., reflects body oblateness). Positive longitude
+is to the west.  Units: DEGREES
+
+
+ Computations by ...
+     Solar System Dynamics Group, Horizons On-Line Ephemeris System
+     4800 Oak Grove Drive, Jet Propulsion Laboratory
+     Pasadena, CA  91109   USA
+     Information: http://ssd.jpl.nasa.gov/
+     Connect    : telnet://ssd.jpl.nasa.gov:6775  (via browser)
+                  telnet ssd.jpl.nasa.gov 6775    (via command-line)
+     Author     : Jon.Giorgini@jpl.nasa.gov
+
+*******************************************************************************

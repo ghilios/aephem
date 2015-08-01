@@ -1,0 +1,134 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of eph2eph</TITLE>
+</HEAD><BODY>
+<H1>eph2eph</H1>
+Section: ephemeris.com (1)<BR>Updated: May 2004<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+eph2eph - merges two JPL binary ephemeris files to a third
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>eph2eph</B>
+
+<I>input1</I> <I>input2</I> <I>output</I> [<I>startJD </I>[<I>stopJD</I>]]
+<BR>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+
+<P>
+
+Merges two JPL binary ephemeris files into a third binary ephemeris file.
+<DL COMPACT>
+<DT><I>input1</I><DD>
+first binary ephemeris input file.
+<DT><I>input2</I><DD>
+second binary ephemeris input file.
+If <I>input1</I> is the same as <I>input2</I>,
+<B>eph2eph</B>
+
+will &quot;scrub&quot; the input ephemeris file to remove any inconsistencies.  (See
+the intentional side effects mentioned below.)
+<DT><I>output</I><DD>
+the merged binary ephemeris file.
+<DT><I>startJD</I><DD>
+optional Julian Day at which to begin (note that eph2eph
+must begin at an integral ephemeris data block boundary of
+typically 32 or 64 days, so
+it will probably start soon before the desired <I>startJD</I>).
+If not specified, all of both input files are read.
+<DT><I>stopJD</I><DD>
+optional Julian Day at which to stop (note that eph2eph
+must end at an integral ephemeris data block boundary of
+typically 32 or 64 days, so
+it will probably end soon after the desired <I>stopJD</I>).
+If not specified, both input files are read to the end.
+</DL>
+<P>
+
+<B>eph2eph</B>
+
+reads in two JPL binary ephemeris files and merges them into
+a third binary ephemeris file.  The first two files must have the same
+JPL ephemeris number, Earth-Moon Mass Ratio (EMRAT), distance of an AU
+(in kilometers), number of constants in the header, and number of
+coefficients in a data block.  Otherwise, they were not generated from
+the same ephemeris and are not compatible.
+<P>
+
+The two input files must be adjacent in time, with either one ending
+exactly where the other begins, or with some overlap between the end
+of the first file and the beginning of the second.  Otherwise, there
+would be a gap with unknown coefficients for a date span.
+<P>
+
+As an intentional side effect,
+<B>eph2eph</B>
+
+will remove several formatting errors in the original JPL files:
+the last data block (a copy of the second to last block) is not repeated;
+ASCII start and stop dates in the header are corrected;
+ipt[*][0] and lpt[0] contain the next possible coefficient location
+rather than 0 (this is the preferred format, as communicated by
+JPL's Myles Standish to Paul Hardy); data in unused portions of the
+header is set to all zeroes.
+<A NAME="lbAE">&nbsp;</A>
+<H2>AUTHOR</H2>
+
+Written by Paul Hardy, ephemeris.com.
+<A NAME="lbAF">&nbsp;</A>
+<H2>REPORTING BUGS</H2>
+
+Report bugs to &lt;<A HREF="mailto:bugs@ephemeris.com">bugs@ephemeris.com</A>&gt;.
+<A NAME="lbAG">&nbsp;</A>
+<H2>COPYRIGHT</H2>
+
+Copyright &#169; 1994-2004 Paul Hardy
+<P>
+
+This is free software; you can redistribute it and/or modify it
+under the terms of version 2.1 of the GNU Lesser General Public
+License as published by the Free Software Foundation.
+<P>
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+<P>
+
+You should have received a copy of the GNU Lesser General Public
+License along with this package; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+or see <A HREF="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</A> on the web.
+<A NAME="lbAH">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+eph2asc">eph2asc</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+asc2eph">asc2eph</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+testeph">testeph</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+headcmp">headcmp</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+ephcmp">ephcmp</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+ephcoeff">ephcoeff</A>(1),
+<A HREF="http://localhost/cgi-bin/man/man2html?1+vtransit">vtransit</A>(1)
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">AUTHOR</A><DD>
+<DT><A HREF="#lbAF">REPORTING BUGS</A><DD>
+<DT><A HREF="#lbAG">COPYRIGHT</A><DD>
+<DT><A HREF="#lbAH">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 06:30:32 GMT, April 22, 2004
+</BODY>
+</HTML>

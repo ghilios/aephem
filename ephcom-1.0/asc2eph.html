@@ -1,0 +1,106 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of asc2eph</TITLE>
+</HEAD><BODY>
+<H1>asc2eph</H1>
+Section: ephemeris.com (1)<BR>Updated: May 2004<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+asc2eph - converts an ASCII header and ASCII data block file to
+a binary ephemeris file
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>asc2eph</B>
+
+<I>header-file</I> <I>data-file</I> <I>ephemeris</I> [<I>startJD </I>[<I>stopJD</I>]]
+<BR>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+
+<P>
+
+Converts an ASCII header and ASCII data block file to a binary ephemeris file.
+<DL COMPACT>
+<DT><I>header-file</I><DD>
+ASCII header file.  If &quot;-&quot;, the file will be read from stdin.
+<DT><I>data-file</I><DD>
+ASCII data blocks, printed three double precision coefficients per line.
+If &quot;-&quot;, the file will be read from stdin and is expected to follow the
+ASCII header.  This allows syntax on Unix such as
+<DT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cat&nbsp;HEADER.405&nbsp;ascp2000.405&nbsp;|&nbsp;asc2eph&nbsp;-&nbsp;-&nbsp;eph2000.405<DD>
+<DT><I>ephemeris</I><DD>
+binary ephemeris output file.  This cannot be written to stdout, because
+the final header cannot be formed until all data blocks are read.
+<DT><I>startJD</I><DD>
+optional Julian Day at which to begin (note that asc2eph
+must begin at an integral ephemeris data block boundary of
+typically 32 or 64 days, so
+it will probably start soon before the desired <I>startJD</I>).
+If not specified, all of both input files are read.
+<DT><I>stopJD</I><DD>
+optional Julian Day at which to stop (note that asc2eph
+must end at an integral ephemeris data block boundary of
+typically 32 or 64 days, so
+it will probably end soon after the desired <I>stopJD</I>).
+If not specified, both input files are read to the end.
+</DL>
+<A NAME="lbAE">&nbsp;</A>
+<H2>AUTHOR</H2>
+
+Written by Paul Hardy, ephemeris.com.
+<A NAME="lbAF">&nbsp;</A>
+<H2>REPORTING BUGS</H2>
+
+Report bugs to &lt;<A HREF="mailto:bugs@ephemeris.com">bugs@ephemeris.com</A>&gt;.
+<A NAME="lbAG">&nbsp;</A>
+<H2>COPYRIGHT</H2>
+
+Copyright &#169; 1994-2004 Paul Hardy
+<P>
+
+This is free software; you can redistribute it and/or modify it
+under the terms of version 2.1 of the GNU Lesser General Public
+License as published by the Free Software Foundation.
+<P>
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+<P>
+
+You should have received a copy of the GNU Lesser General Public
+License along with this package; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+or see <A HREF="http://www.gnu.org/copyleft/lesser.html">http://www.gnu.org/copyleft/lesser.html</A> on the web.
+<A NAME="lbAH">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+eph2eph">eph2eph</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+eph2asc">eph2asc</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+testeph">testeph</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+headcmp">headcmp</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+ephcmp">ephcmp</A>(1), <A HREF="http://localhost/cgi-bin/man/man2html?1+ephcoeff">ephcoeff</A>(1),
+<A HREF="http://localhost/cgi-bin/man/man2html?1+vtransit">vtransit</A>(1)
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">AUTHOR</A><DD>
+<DT><A HREF="#lbAF">REPORTING BUGS</A><DD>
+<DT><A HREF="#lbAG">COPYRIGHT</A><DD>
+<DT><A HREF="#lbAH">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 06:30:32 GMT, April 22, 2004
+</BODY>
+</HTML>

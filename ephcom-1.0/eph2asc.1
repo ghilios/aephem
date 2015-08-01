@@ -1,0 +1,59 @@
+.TH eph2asc "1" "May 2004" "eph2asc (ephemeris) 1.0" ephemeris.com
+.SH NAME
+eph2asc \- converts a binary ephemeris file into an ASCII header file
+and an ASCII data block file
+.SH SYNOPSIS
+.B eph2asc
+\fIephemeris\fR \fIheader-file\fR \fIdata-file\fR [\fIstartJD \fR[\fIstopJD\fR]]
+.br
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Converts a binary ephemeris file into an ASCII header file and an ASCII
+data block file.
+.TP
+\fIephemeris\fR
+binary ephemeris input file.
+.TP
+\fIheader-file\fR
+ASCII header file.
+.TP
+\fIdata-file\fR
+ASCII data blocks, printed three double precision coefficients per line.
+.TP
+\fIstartJD\fR
+optional Julian Day at which to begin (note that eph2asc
+must begin at an integral ephemeris data block boundary of
+typically 32 or 64 days, so
+it will probably start soon before the desired \fIstartJD\fR).
+If not specified, all of both input files are read.
+.TP
+\fIstopJD\fR
+optional Julian Day at which to stop (note that eph2asc
+must end at an integral ephemeris data block boundary of
+typically 32 or 64 days, so
+it will probably end soon after the desired \fIstopJD\fR).
+If not specified, both input files are read to the end.
+.SH AUTHOR
+Written by Paul Hardy, ephemeris.com.
+.SH "REPORTING BUGS"
+Report bugs to <bugs@ephemeris.com>.
+.SH COPYRIGHT
+Copyright \(co 1994-2004 Paul Hardy
+.PP
+This is free software; you can redistribute it and/or modify it
+under the terms of version 2.1 of the GNU Lesser General Public
+License as published by the Free Software Foundation.
+.PP
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+.PP
+You should have received a copy of the GNU Lesser General Public
+License along with this package; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+or see http://www.gnu.org/copyleft/lesser.html on the web.
+.SH "SEE ALSO"
+eph2eph(1), asc2eph(1), testeph(1), headcmp(1), ephcmp(1), ephcoeff(1),
+vtransit(1)

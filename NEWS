@@ -1,0 +1,17 @@
+- Third release: "Canopus"
+  o Python bindings have been added!
+  o JPL ephemerides now work.
+  o Routines for conversion between equatorial and galactic coordinates are
+    added.
+
+- Second release:  "Bellatrix".
+  o Now includes routines for calculated sub-observer point.
+    + Note, however, that there is a bug in the sub-observer longitude.
+  o A bug in the moon routines has been fixed:  the moon position is now
+    correct.
+  o Some of the prototypes have changed to accept const pointers.
+  o Known bug:  the routines for reading JPL ephemerides are broken.  I will try
+    and fix them for a future release.
+
+- First release:  "Arcturus".
+

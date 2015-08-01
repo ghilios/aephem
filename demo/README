@@ -1,0 +1,16 @@
+There are four demo files in this directory.
+
+EXAMPLE.C
+A bare-bones example.
+
+POSITION_TABLE.C
+This is a user-interactive program for returning ephemeris data.  Stretch your
+terminal wide for best viewing experience.
+
+COMPARE_HORIZONS.C
+A program for comparing AEPHEM to JPL HORIZONS output.  The HORIZONS file should
+contain:  JD, ra/dec (apparent; no refraction model), az/el, ob-lon/lat.  See
+horizons_example.dat for a sample.
+
+SOLID_ANGLE.C
+Computes solid angles and other derivatives of physical parameters.

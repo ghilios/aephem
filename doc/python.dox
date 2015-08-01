@@ -1,0 +1,9 @@
+//! \page python_bindings Python Bindings
+//!
+//! <tt>AEPHEM</tt> includes <tt>python</tt> bindings. These come complete with
+//! docstrings, meaning that there is <tt>help()</tt> available in
+//! <tt>python</tt>; in time perhaps this documentation will be included here.
+//!
+//! In general, the <tt>python</tt> functions are similar to the C functions.
+//! An example is included in the <tt>demo</tt> directory of the <tt>AEPHEM</tt>
+//! distribution.
